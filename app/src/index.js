@@ -17,7 +17,7 @@ const erc20_contract_address = viem.getAddress(
 const erc721_contract_address = viem.getAddress(
   "0x68E3Ee84Bcb7543268D361Bb92D3bBB17e90b838"
 );
-const DAPP_ADDRESS_REALY = "0xF5DE34d6BbC0446E2a45719E718efEbaaE179daE";
+const DAPP_ADDRESS_RELAY = "0xF5DE34d6BbC0446E2a45719E718efEbaaE179daE";
 let DAPP_ADDRESS = "null";
 let compressedData = new Map();
 const toBinString = (bytes) =>
@@ -51,7 +51,7 @@ async function handle_advance(data) {
   try {
     if (
       String(data.metadata.msg_sender).toLowerCase() ===
-      DAPP_ADDRESS_REALY.toLowerCase()
+      DAPP_ADDRESS_RELAY.toLowerCase()
     ) {
       console.log("setting Dapp address:", payload);
       DAPP_ADDRESS = payload;
